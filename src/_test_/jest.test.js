@@ -1,7 +1,5 @@
-const add = (x, y) => x + y;
+const { add } = require('../js/jest');
 
-describe('addition', () => {
-  test('expect 2 + 3 = 5', () => {
-    expect(add(2, 3)).toEqual(5);
-  });
+test('expect 2 + 3 = 5', () => {
+  expect(add(2, 3)).toBe(5);
 });
