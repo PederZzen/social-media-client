@@ -19,4 +19,10 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new htmlWebpackPlugin({
+      template: './index.html',
+      filename: './html/index.html',
+    }),
+  ],
 };
