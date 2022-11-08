@@ -2,14 +2,13 @@
   "name": "workflows-ca",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "npm run test-unit && npm run test-e2e-cli",
     "test-unit": "jest --coverage",
     "test-e2e": "cypress open",
     "test-e2e-cli": "cypress run",
-    "build": "sass src/scss:dist/css",
+    "build": "sass src/scss:dist/css && webpack",
     "start": "sass --watch src/scss:dist/css & live-server",
     "prepare": "husky install"
   },
@@ -27,7 +26,9 @@
     "lint-staged": "^13.0.3",
     "live-server": "^1.2.2",
     "prettier": "^2.7.1",
-    "sass": "^1.54.8"
+    "sass": "^1.54.8",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   },
   "dependencies": {
     "bootstrap-dark-5": "^1.1.3",
