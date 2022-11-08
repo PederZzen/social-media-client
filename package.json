@@ -8,7 +8,8 @@
     "test-unit": "jest --coverage",
     "test-e2e": "cypress open",
     "test-e2e-cli": "cypress run",
-    "build": "sass src/scss:dist/css && webpack",
+    "build": "webpack",
+    "dev": "webpack-dev-server",
     "start": "sass --watch src/scss:dist/css & live-server",
     "prepare": "husky install"
   },
@@ -30,7 +31,8 @@
     "prettier": "^2.7.1",
     "sass": "^1.54.8",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
     "bootstrap-dark-5": "^1.1.3",
