@@ -5,9 +5,9 @@ describe('Logging in', () => {
   };
   it('Tests if the login form validates user inputs correctly', () => {
     cy.visit('https://pederzzen.github.io/social-media-client/');
-    cy.get('.text-end .btn-outline-success').click();
+    cy.get('#loginButton').click();
     cy.get('#loginEmail').type(user.email);
     cy.get('#loginPassword').type(user.password);
-    cy.get('.modal-footer > .btn-success').click();
+    cy.get('#modalLoginButton').click();
   });
 });
