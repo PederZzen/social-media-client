@@ -8,7 +8,7 @@
     "test-unit": "jest --coverage",
     "test-e2e": "cypress open",
     "test-e2e-cli": "cypress run",
-    "build": "webpack",
+    "build": "sass src/scss:dist/css && webpack",
     "dev": "webpack-dev-server",
     "start": "sass --watch src/scss:dist/css & live-server",
     "prepare": "husky install"
