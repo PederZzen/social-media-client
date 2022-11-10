@@ -46,7 +46,8 @@
     "**/*.js": [
       "eslint --fix",
       "prettier --write",
-      "jest --bail --passWithNoTests"
+      "jest --bail --passWithNoTests",
+      "npm run deploy"
     ]
   }
 }
