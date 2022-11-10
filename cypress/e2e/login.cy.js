@@ -9,6 +9,5 @@ describe('Logging in', () => {
     cy.get('#loginEmail').type(user.email);
     cy.get('#loginPassword').type(user.password);
     cy.get('#modalLoginButton').click();
-    console.log();
   });
 });
