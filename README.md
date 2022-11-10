@@ -3,3 +3,4 @@
 - lint-staged uses ESLint and Prettier to format on commit
 - jest is run with lint-staged to test js files
 - npm run test to test jest
+- Feil path til ui og router ifra index.js på root
