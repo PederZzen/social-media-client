@@ -43,8 +43,8 @@
   "lint-staged": {
     "**/*.js": [
       "eslint --fix",
-      "prettier --write",
-      "jest --bail --passWithNoTests"
-    ]
+      "prettier --write"
+    ],
+    "*.test.js": "jest"
   }
 }

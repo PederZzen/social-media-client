@@ -1,16 +1,23 @@
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+/* eslint no-use-before-define: 2 */ // --> ON
 
-import 'cypress-localstorage-commands';
+import { login } from '../../src/js/api/index';
+import { logout } from '../../src/js/api/index';
+import { createPost } from '../../src/js/api/index';
+import { deletePost } from '../../src/js/api/index';
+
+Cypress.Commands.add('login', async (email, password) => {
+  await login(email, password);
+});
+
+Cypress.Commands.add('logout', () => {
+  logout();
+});
+
+Cypress.Commands.add('createItem', async (title, body, media, tags) => {
+  let item = await createPost(title, body, media, tags);
+  return item;
+});
+
+Cypress.Commands.add('deletePost', (id) => {
+  deletePost(id);
+});
