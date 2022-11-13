@@ -3,3 +3,6 @@ import ui from './src/js/ui/index.js';
 
 ui();
 router();
+
+
+console.log('ddjoik');
