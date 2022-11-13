@@ -1,5 +1,3 @@
-/* eslint no-use-before-define: 2 */ // --> ON
-
 import { login } from '../../src/js/api/index';
 import { logout } from '../../src/js/api/index';
 import { createPost } from '../../src/js/api/index';
