@@ -20,6 +20,4 @@
 
 ## Issues
 
----
-
 - Problem with URL when visiting GitHub Pages
