@@ -17,3 +17,9 @@
 **Start live server with**
 
 `npm run start`
+
+## Issues
+
+---
+
+- Problem with URL when visiting GitHub Pages
