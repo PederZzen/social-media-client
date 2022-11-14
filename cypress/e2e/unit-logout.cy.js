@@ -1,12 +1,13 @@
 import { email } from './user.js';
 import { password } from './user.js';
 
-describe('Test of login function', () => {
-  it('Tests if the login function returns a valid token', () => {
+describe('Test of logout function', () => {
+  it('Tests if the logout function clears the token from browser storage', () => {
     cy.visit('/');
     cy.login(email, password);
+    cy.logout();
     cy.getLocalStorage('token').then((token) => {
-      expect(token).to.not.be.null;
+      expect(token).to.be.null;
     });
   });
 });

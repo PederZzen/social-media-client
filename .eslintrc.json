@@ -4,7 +4,7 @@
         "es2021": true,
         "node": true,
         "jest": true
-    },
+        },
     "extends": "eslint:recommended",
     "overrides": [
         {
@@ -20,6 +20,12 @@
             "plugins": ["cypress"],
             "extends": ["plugin:cypress/recommended"],
             "rules": { "cypress/no-unnecessary-waiting": "off" }
+        },
+        {
+            "files": ["./cypress/support/commands.js"],
+            "rules": {
+                "no-undef": "off"
+            }
         }
     ],
     "parserOptions": {
